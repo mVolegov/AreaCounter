@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>CircumscribedCircleRadius</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div th:insert="/elements/menu :: menu"></div>
+    <div class="page">
+        <h1>Вычисление площади через радиус описанной окружности</h1>
+        <p>
+            Вокруг любого треугольника можно описать оружность.
+            Ее центр - точка пересечения серединных перпендикуляров к сторонам треугольника.
+            <br>
+            Иногда говорят, что окружность описана около треугольника.
+            Это означает то же самое - все вершины треугольника лежат на окржуности.
+        </p>
+        <img class="triangle_example" src="/icons/circumscribedcircleradius.jpg">
+        <p>
+            Площадь треугольника через описанную окружность вычисляется по слудующий формуле:
+        </p>
+        <img class="triangle_example" src="/icons/circumscribedcircleradius-formula.png">
+        <div class="block_input">
+            <form method="post" th:action="@{/CircumscribedCircleRadiusMethod}" th:object="${circumscribedCircleRadius}">
+                <label for="a">Сторона A: </label>
+                <input type="number" step="any" th:field="*{a}" id="a" placeholder="Enter a">
+                <br><br>
+                <label for="b">Сторона В: </label>
+                <input type="number" step="any" th:field="*{b}" id="b" placeholder="Enter b">
+                <br><br>
+                <label for="c">Введите C:</label>
+                <input type="number" step="any" th:field="*{c}" id="c" placeholder="Enter c">
+                <br><br>
+                <label for="r">Введите радиус вневписанной окружности:</label>
+                <input type="number" step="any" th:field="*{r}" id="r" placeholder="Enter radius">
+                <br><br>
+                <button type="submit" class="btn">Count!</button>
+            </form>
+            <p class="answer" th:utext="${area}"></p>
+            <a href="/">Назад на главную</a>
+        </div>
+    </div>
+</body>
+</html>
+

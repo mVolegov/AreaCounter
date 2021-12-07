@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+/*Обнуление*/
+*,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #171717;
+    -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease;
+    line-height: 1;
+}
+
+a:hover {
+    color: #FF9740;
+}
+
+.menu li a:hover {
+    color: #009899;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: lighter;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    padding: 25px 20px 10px;
+}
+
+html,
+body {
+    height: 100%;
+    line-height: 1;
+    font-family: Montserrat, sans-serif;
+}
+
+label {
+    display: block;
+    padding-bottom: 10px;
+    color: white;
+}
+
+input {
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 15px;
+    box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
+}
+
+input:focus {
+    outline: solid 4px #FF9740;
+}
+
+.page {
+    width: 85%;
+    position: absolute;
+    right: 0;
+    min-height: 100%;
+    display: grid;
+    align-items: center;  
+    justify-content: center;
+    background-color: white;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 20px;
+}
+
+.block_input form {
+    text-align: center;
+}
+
+.block_input {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #009899;
+    width: fit-content;
+    height: fit-content;
+    padding: 50px 50px 25px;
+    font-size: 20px;
+    box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.menu {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    width: 15%;
+    background-color: #FF9740;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.menu li {
+    margin-bottom: 20px;
+    padding: 5px 0;
+}
+
+.menu li a {
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.btn {
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 10px 40px;
+    color: black;
+    background: #99DFDF;
+    border: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.btn:hover {
+    font-weight: 900;
+    background: #FF9740;
+    -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease;
+}
+
+.triangle_example {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-bottom: 1%;
+    padding-top: 1%;
+}
+
+p {
+    padding: 10px 15%;
+    /*display: block;*/
+    /*text-indent: 25px;*/
+}
+
+table {
+    border: 2px solid #FF9740;
+    border-radius: 10px;
+}
+
+th,
+tr,
+td {
+    font-weight: 500;
+    text-align: center;
+    padding: 10px 30px;
+}
+
+caption {
+    font-weight: 900;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.classification {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.answer {
+    padding-top: 20px;
+    text-align: center;
+    color: white;
+}
+
+.history {
+    padding-top: 40px;
+}
+
+.alt-menu {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    width: 15%;
+    background-color: #FF9740;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-weight: 900;
+    visibility: hidden;
+}
+
+.alt-menu li {
+    /*margin-bottom: 20px;*/
+    /*padding: 5px 0;*/
+}
+
+.alt-menu li a {
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+@media (max-width: 1230px) {
+    .menu {
+        visibility: hidden;
+    }
+
+    .alt-menu {
+        visibility: visible;
+    }
+
+    .page {
+        /*width: 100%;*/
+    }
+}
+
+@media (max-width: 759px) {
+    table tr {
+        display: block;
+    }
+}

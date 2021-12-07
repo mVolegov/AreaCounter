@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>InscribedCircleRadius</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div th:insert="/elements/menu :: menu"></div>
+    <div class="page">
+        <h1>Вычисление площади через радиус вписанной окружности</h1>
+        <p>
+            Довольно часто дается задача, в которой в треугольник вписана окружность.
+            В этом случае можно применяется формула площади треугольника через радиус вписанной окружности.
+            <br>
+            Чтобы найти площадь треугольника потребуются длины всех сторон и радиус окружности.
+            Радиус – это половина диаметра. То есть, если по условиям дана длина диаметра,
+            ее необходимо просто поделить пополам.
+            Для начала просчитываем полупериметр треугольника. Он находится по фомуле:
+        </p>
+        <img class="triangle_example" src="/icons/semiperimeter-formula.png">
+        <p>
+            Зная полупериметр и длину радиуса, вычисляем площадь по формуле:
+        </p>
+        <img class="triangle_example" src="/icons/inscribedcircleradius-formula.png">
+        <img class="triangle_example" src="/icons/inscribedcircleradius.jpg">
+        <div class="block_input">
+            <form method="post" th:action="@{/InscribedCircleRadiusMethod}" th:object="${inscribedCircleRadius}">
+                <label for="a">Сторона A: </label>
+                <input type="number" step="any" th:field="*{a}" id="a" placeholder="Enter a">
+                <br><br>
+                <label for="b">Сторона В: </label>
+                <input type="number" step="any" th:field="*{b}" id="b" placeholder="Enter b">
+                <br><br>
+                <label for="c">Введите C:</label>
+                <input type="number" step="any" th:field="*{c}" id="c" placeholder="Enter c">
+                <br><br>
+                <label for="r">Введите радиус вписанной окружности:</label>
+                <input type="number" step="any" th:field="*{r}" id="r" placeholder="Enter radius">
+                <br><br>
+                <button type="submit" class="btn">Count!</button>
+            </form>
+            <p class="answer" th:utext="${area}"></p>
+            <a href="/">Назад на главную</a>
+        </div>
+    </div>
+</body>
+</html>
+
+
