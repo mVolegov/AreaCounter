@@ -5,12 +5,24 @@
     <title th:text="${title}"></title>
     <meta name="viewport" content="width=device-width">
     <link href="/css/style.css" rel="stylesheet">
+    <link rel="icon" href="/icons/favicon_io/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <div th:insert="/elements/menu :: menu"></div>
     <div class="page">
-        <h1>Треугольники. Общие сведения</h1>
+        <h1><a id="top">Треугольники. Общие сведения</a></h1>
         <img class="triangle_example" src="/icons/triangle-example256px.png">
+        <nav class="page_content">
+            <ol type="1">
+                <li><a href="#classification_section">Классификация треугольников</a></li>
+                <li><a href="#circles_section">Описанная и вписанная окружности</a></li>
+                <ul>
+                    <li style="margin-left: 20px"><a href="#out">Описанная окружность</a></li>
+                    <li style="margin-left: 20px"><a href="#in">Вписанная окружность</a></li>
+                </ul>
+                <li><a href="#history_section">История изучения</a></li>
+            </ol>
+        </nav>
         <p>
             Треугольник (в евклидовом пространстве) — геометрическая фигура, образованная тремя отрезками,
             которые соединяют три точки, не лежащие на одной прямой.
@@ -46,9 +58,9 @@
             Если не оговорено иное, треугольник в данной статье предполагается невырожденным.
         </p>
         <table class="classification">
-            <caption>Классификация треугольников</caption>
+            <a id="classification_section"><caption>Классификация треугольников</caption></a>
             <tr>
-                <th colspan="3">По величине углов</th>
+                <th colspan="3"><u>По величине углов</u></th>
             </tr>
             <tr>
                 <th>Остроугольный</th>
@@ -56,12 +68,12 @@
                 <th>Прямоугольный</th>
             </tr>
             <tr>
-                <th><img src="/icons/acute-triangle128px.png"></th>
-                <th><img src="/icons/obtuse-triangle128px.png"></th>
-                <th><img src="/icons/right-triangle128px.png"></th>
+                <td><img src="/icons/acute-triangle128px.png"></td>
+                <td><img src="/icons/obtuse-triangle128px.png"></td>
+                <td><img src="/icons/right-triangle128px.png"></td>
             </tr>
             <tr>
-                <th colspan="3">По числу равных сторон</th>
+                <th colspan="3"><u>По числу равных сторон</u></th>
             </tr>
             <tr>
                 <th>Разносторонний</th>
@@ -69,12 +81,28 @@
                 <th>Равносторонний</th>
             </tr>
             <tr>
-                <th><img src="/icons/scalene-triangle128px.png"></th>
-                <th><img src="/icons/isosceles-triangle128px.png"></th>
-                <th><img src="/icons/equilateral-triangle128px.png"></th>
+                <td><img src="/icons/scalene-triangle128px.png"></td>
+                <td><img src="/icons/isosceles-triangle128px.png"></td>
+                <td><img src="/icons/equilateral-triangle128px.png"></td>
             </tr>
         </table>
-        <h2 class="history">История изучения</h2>
+        <a id="circles_section"><h2>Описанная и вписанная окружности</h2></a>
+        <p>
+            <a id="out"><u>Описанная окружность</u></a> — окружность, проходящая через все три вершины треугольника.
+            Описанная окружность всегда единственна, её центр совпадает с точкой пересечения перпендикуляров
+            к сторонам треугольника, проведённых через середины сторон.
+            В тупоугольном треугольнике этот центр лежит вне треугольника.
+        </p>
+        <p>
+            <a id="in"><u>Вписанная окружность</u></a> — окружность, касающаяся всех трёх сторон треугольника.
+            Она единственна. Центр вписанной окружности называется инцентром,
+            он совпадает с точкой пересечения биссектрис треугольника.
+        </p>
+        <p>
+            <a href="/icons/circles.png" target="_blank" id="detail"><img src="/icons/triangle_circle.png"></a>
+            см. подробнее
+        </p>
+        <a id="history_section"><h2 class="history">История изучения</h2></a>
         <p>
             Свойства треугольника, изучаемые в школе, за редким исключением, известны с ранней античности.
             Зачатки тригонометрических знаний можно найти в математических рукописях Древнего Египта,
@@ -161,6 +189,7 @@
             Активно развивалась теория преобразований — проективное, изогональное, изотомическое и другие.
             Полезной оказалась идея рассмотрения задач теории треугольников на комплексной плоскости.
         </p>
+        <p><a id="to_top" href="#top">Вернуться к началу страницы</a></p>
     </div>
 </body>
 </html>
